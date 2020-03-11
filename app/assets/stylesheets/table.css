@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Raleway:500&display=swap');
+
+body {
+    padding: 10px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+a {
+    padding-left: 10px;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
