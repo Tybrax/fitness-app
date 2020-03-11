@@ -1,24 +1,9 @@
-# README
+# Track your fitness habits
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the 6th project of the **Full stack developer** path delivered **by OpenClassroom**.
 
-Things you may want to cover:
+**Specs**
+Build a fitness tracker site called Move and Groove that allows users to sign up and log activities of different kinds. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The technologies you'll use to do so include **HTML**, **CSS**, **Bootstrap**, **Ruby on Rails**, and **Devise**.
+**Bastien Ratat**
