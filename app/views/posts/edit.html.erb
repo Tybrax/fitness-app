@@ -1,6 +1,13 @@
-<h1>Editing Post</h1>
+<h1>Edit an article</h1>
 
-<%= render 'form', post: @post %>
-
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= form_for @post do |f| %>
+    <div class="form-group">
+        <%= f.text_field :title, placeholder: ' new title', class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= f.text_area :body, placeholder: 'new content', class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-dark" type="submit">Edit your article</button>
+    </div>
+<% end %>
