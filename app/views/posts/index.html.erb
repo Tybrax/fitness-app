@@ -14,7 +14,7 @@
       <tr>
         <td><%= link_to post.title, post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure to remove this article?' } %></td>
+        <td><%= link_to 'Delete post', post, method: :delete, data: { confirm: 'Are you sure to remove this article?' } %></td>
       </tr>
     <% end %>
   </tbody>
