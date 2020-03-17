@@ -1,13 +1,54 @@
-<h1>New article</h1>
+<div class="jumbotron">
+    <h1 class="text-center font-weight-bold text-transform-uppercase">New article</h1>
+</div>
 
-<%= form_for @post do |f| %>
-    <div class="form-group">
-        <%= f.text_field :title, placeholder: 'title', class: 'form-control' %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <%= form_with(model: @post, local: true) do |form| %>
+              <% if @post.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+                  <ul>
+                  <% @post.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <div class="actions">
+                <div class="form-group mt-2">
+                    <h5 class="text-dark font-weight-bold">Add a title</h5>
+                    <%= form.text_field :title, class: 'form-control' %>
+                </div>
+
+                <div class="form-group mt-2">
+                    <h5 class="text-dark font-weight-bold">Add some content</h5>
+                    <%= form.text_area :body, class: 'form-control' %>
+                </div>
+
+
+                <div class="form-group mt-2">
+                  <h5 class="text-dark font-weight-bold">Upload a picture</h5>
+                  <%= form.file_field :photo %>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-dark mt-2" type="submit">Add</button>
+                </div>
+              </div>
+            <% end %>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+
+        </div>
     </div>
-    <div class="form-group">
-        <%= f.text_area :body, placeholder: 'content', class: 'form-control' %>
-    </div>
-    <div class="form-group">
-        <button class="btn btn-dark" type="submit">Add new post</button>
-    </div>
-<% end %>
+</div>
+
+

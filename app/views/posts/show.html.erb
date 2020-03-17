@@ -1,6 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="jumbotron">
+    <h1><%= @post.title %></h1>
+</div>
 
-<h1><%= @post.title %></h1>
-<p><%= @post.body %><p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+           <% if @post.photo.present? %>
+                <p><%= image_tag @post.photo.url, class: 'img-fluid rounded shadow', width: 500 %></p>
+           <% end %>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <article>
+                <p class="text-justify"><%= @post.body %></p>
+            </article>
+        </div>
+    </div>
+</div>
+
+
+
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

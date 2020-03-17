@@ -3095,3 +3095,888 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.2ms | Allocations: 6721)
 
 
+Started GET "/posts" for ::1 at 2020-03-17 08:33:57 +0100
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3507)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 522ms (Views: 489.1ms | ActiveRecord: 1.3ms | Allocations: 40648)
+
+
+Started GET "/posts/9" for ::1 at 2020-03-17 08:34:00 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 246)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 55.7ms | ActiveRecord: 0.3ms | Allocations: 7514)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 08:34:01 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 750)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 47.8ms | ActiveRecord: 0.2ms | Allocations: 6770)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:34:02 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.0ms | Allocations: 7010)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:34:04 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 752)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.2ms | Allocations: 6766)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:40:19 +0100
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 3507)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 192ms (Views: 162.0ms | ActiveRecord: 1.5ms | Allocations: 17790)
+
+
+Started GET "/about/index" for ::1 at 2020-03-17 08:40:26 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.0ms | Allocations: 6711)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:40:27 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 756)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.2ms | Allocations: 6780)
+
+
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentPhotoToPosts (20200317074319)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "photo_file_name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "photo_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "photo_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "photo_updated_at" datetime[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200317074319"]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts/new" for ::1 at 2020-03-17 08:45:55 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 278.8ms | Allocations: 148134)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 0.8ms | Allocations: 155141)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x000000000a983d20>:0x000000000a982448>
+Did you mean?  @post):
+    1: <h1>New article</h1>
+    2: 
+    3: <%= form_with(model: post, local: true) do |form| %>
+    4:   <% if post.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  
+app/views/posts/new.html.erb:3
+Started GET "/" for ::1 at 2020-03-17 08:46:04 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1075)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 0.3ms | Allocations: 7511)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:46:26 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 973)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.2ms | Allocations: 7967)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:46:29 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 29.9ms | Allocations: 5346)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 78.7ms | ActiveRecord: 0.0ms | Allocations: 11505)
+
+
+Started POST "/posts" for ::1 at 2020-03-17 08:47:27 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"irQXZdO9640qKggWXERbhDqDECQIzAZvwo42DYZXdAYfzkq8dSFZC72M9NGCBhIA5KIDY1rqB3fRu0/GiTCung==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Create Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1563)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 57.7ms | ActiveRecord: 0.8ms | Allocations: 15734)
+
+
+Started POST "/posts" for ::1 at 2020-03-17 08:47:57 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"DtBwe91MwI/lKapMMcnIfFGsX9cos+vAcT2bY3YhI1rL5Vko05h+aQuz8aECAcvWwPDrHh1/uoYGtcmFDM+JvQ==", "post"=>{"title"=>"titre", "body"=>"oui", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000000000acb4e90 @tempfile=#<Tempfile:C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1ptlrx4.jpg>, @original_filename="Chrysanthemum.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"Chrysanthemum.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1ptlrx4.jpg to C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1ptlrx4.jpg to C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg to C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1x7zlit.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1x7zlit.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg to C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1x7zlit.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1x7zlit.jpg"
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & identify -format '%wx%h,%[exif:orientation]' "C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg[0]" 2>NUL
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & identify -format '%wx%h,%[exif:orientation]' "C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg[0]" 2>NUL
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: Paperclip::Errors::NotIdentifiedByImageMagickError>
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg to C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-11ks01w.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-11ks01w.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-1y7f2ho.jpg to C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-11ks01w.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/10665de14261e416423e82f725bf668920200317-3260-11ks01w.jpg"
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 437ms (Views: 49.8ms | ActiveRecord: 0.0ms | Allocations: 20573)
+
+
+Started POST "/posts" for ::1 at 2020-03-17 08:49:09 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"1qlAwE0mAb4Z9dmY0kdAZK6RyWvOoP99JpszM58ldA0TnGmTQ/K/WPdvgnXhj0POP819ovtsrjtRE2HV5cve6g==", "post"=>{"title"=>"titre", "body"=>"oui", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000000000ace6738 @tempfile=#<Tempfile:C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-r7ugnu.jpg>, @original_filename="Desert.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"Desert.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-r7ugnu.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1yfeqgx.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1yfeqgx.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-r7ugnu.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1yfeqgx.jpg
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1yfeqgx.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-3m3dl4.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-3m3dl4.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1yfeqgx.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-3m3dl4.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-3m3dl4.jpg"
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1yfeqgx.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-avxayo.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-avxayo.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1yfeqgx.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-avxayo.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-avxayo.jpg"
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "titre"], ["body", "oui"], ["photo_file_name", "Desert.jpg"], ["photo_content_type", "image/jpeg"], ["photo_file_size", 845941], ["photo_updated_at", "2020-03-17 07:49:10.212928"]]
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+Redirected to http://localhost:4001/posts/10
+Completed 302 Found in 117ms (ActiveRecord: 13.0ms | Allocations: 20849)
+
+
+Started GET "/posts/10" for ::1 at 2020-03-17 08:49:10 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 450)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 62.1ms | ActiveRecord: 0.3ms | Allocations: 9721)
+
+
+Started GET "/system/posts/photos/000/000/010/medium/Desert.jpg?1584431350" for ::1 at 2020-03-17 08:49:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/system/posts/photos/000/000/010/medium/Desert.jpg"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-17 08:49:16 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1106)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.2ms | Allocations: 7254)
+
+
+Started GET "/system/posts/photos/000/000/010/medium/Desert.jpg?1584431350" for ::1 at 2020-03-17 08:49:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/system/posts/photos/000/000/010/medium/Desert.jpg"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/10" for ::1 at 2020-03-17 08:49:18 +0100
+Started GET "/system/posts/photos/000/000/010/medium/Desert.jpg?1584431350" for ::1 at 2020-03-17 08:49:18 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 229)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/system/posts/photos/000/000/010/medium/Desert.jpg"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.2ms | Allocations: 35146)
+
+
+Started GET "/posts/10" for ::1 at 2020-03-17 08:49:41 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.3ms | Allocations: 7940)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 08:49:55 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.2ms | Allocations: 7248)
+
+
+Started DELETE "/posts/10" for ::1 at 2020-03-17 08:50:02 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8O0N+Gy9TWDkY6VhdAqGmRIPlGxqLm2RedHfHwXK/oY12CSrYmnzhgr5/oxHwoUzg1MgpV/iPNcOWY35fyRUYQ==", "id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+[paperclip] deleting C:/Users/Bastien/Desktop/FULL STACK DEVELOPER/6. TRACK YOUR FITNESS HABITS/new_app/traveller/public/system/posts/photos/000/000/010/original/Desert.jpg
+Redirected to http://localhost:4001/posts
+Completed 302 Found in 24ms (ActiveRecord: 13.6ms | Allocations: 3603)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 08:50:02 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 739)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.2ms | Allocations: 6777)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:51:41 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1293)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.0ms | Allocations: 8278)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:52:07 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1116)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.0ms | Allocations: 8091)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:53:21 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.0ms | Allocations: 8108)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:53:37 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 0.0ms | Allocations: 8101)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:54:02 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 0.0ms | Allocations: 8107)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:54:10 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 8098)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:55:06 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.0ms | Allocations: 7784)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:55:19 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.0ms | Allocations: 7777)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:55:35 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 7789)
+
+
+Started POST "/posts" for ::1 at 2020-03-17 08:56:14 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"jIugvbRFiOUz3ACS4lTqjpRu6jzkqGydhH4vCAhaLwBJvonuupE2A91GW3/RnOkkBTJe9dFkPdvz9n3ucrSF5w==", "post"=>{"title"=>"test", "body"=>"test", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000000000e1294f0 @tempfile=#<Tempfile:C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1xh2hcd.jpg>, @original_filename="Desert.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"Desert.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1xh2hcd.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-bkc3cm.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-bkc3cm.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1xh2hcd.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-bkc3cm.jpg
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-bkc3cm.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1b7wr97.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1b7wr97.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-bkc3cm.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1b7wr97.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1b7wr97.jpg"
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-bkc3cm.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-guaomp.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-guaomp.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-bkc3cm.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-guaomp.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-guaomp.jpg"
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "test"], ["body", "test"], ["photo_file_name", "Desert.jpg"], ["photo_content_type", "image/jpeg"], ["photo_file_size", 845941], ["photo_updated_at", "2020-03-17 07:56:14.445698"]]
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+Redirected to http://localhost:4001/posts/11
+Completed 302 Found in 133ms (ActiveRecord: 16.9ms | Allocations: 14728)
+
+
+Started GET "/posts/11" for ::1 at 2020-03-17 08:56:14 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 0.2ms | Allocations: 7971)
+
+
+Started GET "/posts/11/edit" for ::1 at 2020-03-17 08:56:32 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 517)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 51.7ms | ActiveRecord: 0.2ms | Allocations: 8001)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:56:33 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1086)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.2ms | Allocations: 7235)
+
+
+Started DELETE "/posts/11" for ::1 at 2020-03-17 08:56:37 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j6UDvaZnGf2p8B8d2FqJ18hxFDHmUM08T/umkgt4ETtKkCruqLOnG0dqRPDrkop9WS2g+NOcnHo4c/R0cZa73A==", "id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+[paperclip] deleting C:/Users/Bastien/Desktop/FULL STACK DEVELOPER/6. TRACK YOUR FITNESS HABITS/new_app/traveller/public/system/posts/photos/000/000/011/original/Desert.jpg
+Redirected to http://localhost:4001/posts
+Completed 302 Found in 22ms (ActiveRecord: 13.2ms | Allocations: 3529)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 08:56:37 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 739)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.2ms | Allocations: 6777)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 08:59:31 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 799)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.0ms | Allocations: 7781)
+
+
+Started POST "/posts" for ::1 at 2020-03-17 09:00:02 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"XJCjl0eW57ovWj6l07O6zvgE0XHkbF8iSr4TfwsbNXDJ6v5O4QpVPLj8wmIN8fNKJiXCNrZKXjpZi2q0BHzv6A==", "post"=>{"title"=>"Le désert de Gobi", "body"=>"Voyages dans un des plus majestueux désert d'orient!", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000000000d145138 @tempfile=#<Tempfile:C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1fkorfp.jpg>, @original_filename="Desert.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"Desert.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1fkorfp.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-uov03k.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-uov03k.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1fkorfp.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-uov03k.jpg
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-uov03k.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1kmg8ce.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1kmg8ce.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-uov03k.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1kmg8ce.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1kmg8ce.jpg"
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-uov03k.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1mph3xw.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1mph3xw.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-uov03k.jpg to C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1mph3xw.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/000c016d34ff41e245b69c67f22c83ff20200317-3260-1mph3xw.jpg"
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Le désert de Gobi"], ["body", "Voyages dans un des plus majestueux désert d'orient!"], ["photo_file_name", "Desert.jpg"], ["photo_content_type", "image/jpeg"], ["photo_file_size", 845941], ["photo_updated_at", "2020-03-17 08:00:02.859813"]]
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+Redirected to http://localhost:4001/posts/12
+Completed 302 Found in 111ms (ActiveRecord: 14.8ms | Allocations: 14736)
+
+
+Started GET "/posts/12" for ::1 at 2020-03-17 09:00:03 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 474)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 55.5ms | ActiveRecord: 0.5ms | Allocations: 7156)
+
+
+Started GET "/posts/12" for ::1 at 2020-03-17 09:00:43 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 469)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 63.8ms | ActiveRecord: 0.2ms | Allocations: 7957)
+
+
+Started GET "/posts/12" for ::1 at 2020-03-17 09:00:55 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 468)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.2ms | Allocations: 7964)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 09:01:10 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1086)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 0.2ms | Allocations: 7226)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:01:23 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 804)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.0ms | Allocations: 6957)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:01:58 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.0ms | Allocations: 7778)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:02:19 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 803)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.0ms | Allocations: 7778)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:04:26 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 819)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.0ms | Allocations: 7787)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:05:28 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 819)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 57.9ms | ActiveRecord: 0.0ms | Allocations: 7794)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:05:50 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 819)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 7799)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:06:44 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 643)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.0ms | Allocations: 7623)
+
+
+Started POST "/posts" for ::1 at 2020-03-17 09:06:57 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"+DEn+EtXR9MueWuCN9YMHCd18IVnGENcn19sZH3p6oY9BA6rRYP5NcDjMG8EHg+2tilETFLUEhro1z6CBwdAYQ==", "post"=>{"title"=>"Test 2", "body"=>"Test 2 content", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000000000d9277e8 @tempfile=#<Tempfile:C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1s7ffeu.jpg>, @original_filename="Jellyfish.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"Jellyfish.jpg\"\r\nContent-Type: image/jpeg\r\n">}}
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1s7ffeu.jpg to C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1t39uit.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1t39uit.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200317-3260-1s7ffeu.jpg to C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1t39uit.jpg
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1t39uit.jpg to C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1wn1w2.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1wn1w2.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1t39uit.jpg to C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1wn1w2.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1wn1w2.jpg"
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1t39uit.jpg to C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-5s7f5e.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-5s7f5e.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-1t39uit.jpg to C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-5s7f5e.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/28f4e638fbcacc4dcf40a55c12a218d020200317-3260-5s7f5e.jpg"
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Test 2"], ["body", "Test 2 content"], ["photo_file_name", "Jellyfish.jpg"], ["photo_content_type", "image/jpeg"], ["photo_file_size", 775702], ["photo_updated_at", "2020-03-17 08:06:57.372734"]]
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+Redirected to http://localhost:4001/posts/13
+Completed 302 Found in 126ms (ActiveRecord: 14.2ms | Allocations: 16305)
+
+
+Started GET "/posts/13" for ::1 at 2020-03-17 09:06:57 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 468)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 0.2ms | Allocations: 7157)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 09:07:02 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1209)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.2ms | Allocations: 7363)
+
+
+Started DELETE "/posts/13" for ::1 at 2020-03-17 09:07:05 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5tCD3wsu161DN9ouajQuHSrWJFUPQFCGtHVHc3AtoVMj5aqMBfppS62tgcNZ/C23u4qQnDqMAcDD/RWVCsMLtA==", "id"=>"13"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[36mPost Destroy (0.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+[paperclip] deleting C:/Users/Bastien/Desktop/FULL STACK DEVELOPER/6. TRACK YOUR FITNESS HABITS/new_app/traveller/public/system/posts/photos/000/000/013/original/Jellyfish.jpg
+Redirected to http://localhost:4001/posts
+Completed 302 Found in 23ms (ActiveRecord: 13.0ms | Allocations: 3483)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 09:07:05 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 862)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.2ms | Allocations: 6890)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:07:07 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms | Allocations: 6325)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:07:24 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 648)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.0ms | Allocations: 7641)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:07:32 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 643)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 0.0ms | Allocations: 7617)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:07:54 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 645)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.0ms | Allocations: 7625)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:08:09 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 645)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 58.1ms | ActiveRecord: 0.0ms | Allocations: 7625)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:09:03 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 306.9ms | Allocations: 147550)
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 0.0ms | Allocations: 148764)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `message' for #<#<Class:0x000000000d8af6a8>:0x000000000d8adc68>):
+    25:               <div class="actions">
+    26:                 <div class="form-group mt-2">
+    27:                     <h5 class="text-dark font-weight-bold">Add a title</h5>
+    28:                     <%= message.text_field :title %>
+    29:                 </div>
+    30: 
+    31:                 <div class="form-group mt-2">
+  
+app/views/posts/new.html.erb:28
+app/views/posts/new.html.erb:12
+Started GET "/posts/new" for ::1 at 2020-03-17 09:09:23 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 642)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms | Allocations: 7621)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:09:41 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 644)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.0ms | Allocations: 7626)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:10:25 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 662)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.0ms | Allocations: 7632)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-17 09:10:38 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 662)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.0ms | Allocations: 7639)
+
+
+Started GET "/posts/about/index" for ::1 at 2020-03-17 09:11:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts/about/index"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for ::1 at 2020-03-17 09:11:16 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 6339)
+
+
+Started GET "/" for ::1 at 2020-03-17 09:11:17 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1085)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.2ms | Allocations: 7237)
+
+
+Started GET "/about/index" for ::1 at 2020-03-17 09:11:17 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.0ms | Allocations: 6671)
+
+
+Started GET "/" for ::1 at 2020-03-17 09:11:23 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 869)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.2ms | Allocations: 6883)
+
+
