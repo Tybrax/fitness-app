@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div class="jumbotron">
     <h1 class="text-center"><%= @post.title %></h1>
-    <h4>by <%= link_to @post.user.name, @post.user %></h4>
+    <h4>by <%= link_to @post.user.name, @post.user, class: 'user-name' %></h4>
 </div>
 
 <div class="container">

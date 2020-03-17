@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   # posts and site
+  get '/posts' => 'posts#index'
   get 'sessions/new'
-  root 'posts#index'
-  get 'about/index'
+  get '/about' => 'about#index'
   get 'site/home'
+  root 'site#home'
   # routes for users
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

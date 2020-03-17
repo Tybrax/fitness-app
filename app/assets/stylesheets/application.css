@@ -15,7 +15,123 @@
  */
 
 @import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-* {
-    font-family: 'Arvo', serif;
+.main-title {
+    color: #f76a8c;
 }
+
+h4 {
+    text-transform: uppercase;
+}
+
+.navbar-brand-sub {
+    color: #f76a8c;
+}
+
+h1.main-title,
+h4 {
+    font-family: 'Arvo', serif;
+    letter-spacing: 2px;
+}
+
+a.navbar-brand {
+    letter-spacing: 1px;
+    font-size: 2em;
+}
+
+.li-items {
+    letter-spacing: 1px;
+    color: black;
+    text-decoration: none;
+}
+
+a.li-items {
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+a.li-items:hover {
+    color: #f76a8c;
+}
+
+.logs-link {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+a.logs-link {
+    text-decoration: none;
+    color: #f76a8c;
+    font-family: 'Raleway';
+}
+
+a.logs-link:hover {
+    color: #1b262c;
+}
+
+.title,
+.subtitle {
+    font-size: 1.4em;
+}
+
+.subtitle {
+    color: #f76a8c;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a.article-link {
+    text-decoration: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+a.article-link:hover {
+    color: #1b262c;
+}
+
+.article-link {
+    text-transform: uppercase;
+    color: #f76a8c;
+}
+
+a.article-editers {
+    color: #1b262c;
+    text-decoration: none;
+}
+
+a.article-editers:hover {
+    color: #f76a8c;
+}
+
+a.add-article {
+    text-decoration: none;
+}
+
+a.add-article:hover {
+    color: #1b262c;
+}
+
+.add-article {
+    text-transform: uppercase;
+    color: #f76a8c;
+}
+
+.user-name {
+    font-family: 'Raleway';
+}
+
+a.user-name {
+    text-decoration: none;
+    color: #f76a8c;
+    font-family: 'Raleway';
+}
+
+
+footer {
+    margin-top: 40px;
+}
+

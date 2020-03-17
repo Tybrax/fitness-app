@@ -11,16 +11,16 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.title, post %></td>
+      <tr class="article-rows container border rounded shadow pl-5 pr-5">
+        <td class="resources"><%= link_to post.title, post, class: 'article-link' %></td>
         <td>
           <% if post.user == current_user %>
-            <%= link_to 'Edit', edit_post_path(post) %>
+            <%= link_to 'Edit', edit_post_path(post), class: 'article-editers' %>
           <% end %>
         </td>
         <td>
           <% if post.user == current_user %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'article-editers' %>
           <% end %>
         </td>
       </tr>
@@ -29,5 +29,6 @@
 </table>
 
 <br>
-
-<%= link_to 'New Post', new_post_path %>
+<% if current_user %>
+  <%= link_to 'Add an article', new_post_path, class: 'add-article' %>
+<% end %>
