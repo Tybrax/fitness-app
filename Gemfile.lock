@@ -102,7 +102,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9-x64-mingw32)
       mini_portile2 (~> 2.4.0)
-    paperclip (6.0.0)
+    paperclip (6.1.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
       mime-types
@@ -144,7 +144,7 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rake (13.0.1)
     regexp_parser (1.7.0)
-    rubyzip (2.2.0)
+    rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.2.1-x64-mingw32)
@@ -206,7 +206,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   jbuilder (~> 2.7)
-  paperclip (~> 6.0.0)
+  paperclip (~> 6.1.0)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
   sass-rails (>= 6)

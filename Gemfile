@@ -18,13 +18,11 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Upload pictures and store path in db models
-gem "paperclip", "~> 6.0.0"
+gem 'paperclip', '~> 6.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# Use Paperclip for images in Ror
-# gem "paperclip", "~> 6.0.0"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
