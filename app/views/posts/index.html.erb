@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Traveling articles!</h1>
+<h1>Traveling memories</h1>
 
 <table>
   <thead>
@@ -13,8 +13,16 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= link_to post.title, post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Delete post', post, method: :delete, data: { confirm: 'Are you sure to remove this article?' } %></td>
+        <td>
+          <% if post.user == current_user %>
+            <%= link_to 'Edit', edit_post_path(post) %>
+          <% end %>
+        </td>
+        <td>
+          <% if post.user == current_user %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
