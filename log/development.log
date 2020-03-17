@@ -5067,3 +5067,99 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.2ms | Allocations: 6611)
 
 
+Started GET "/users/new" for ::1 at 2020-03-17 11:41:33 +0100
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 16.3ms | Allocations: 1253)
+  Rendered users/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 1838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 191ms (Views: 158.7ms | ActiveRecord: 0.8ms | Allocations: 20630)
+
+
+Started GET "/users/new" for ::1 at 2020-03-17 11:42:00 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.7ms | Allocations: 708)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.0ms | Allocations: 8053)
+
+
+Started GET "/users/new" for ::1 at 2020-03-17 11:42:29 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.4ms | Allocations: 708)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1053)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.0ms | Allocations: 8038)
+
+
+Started GET "/users/new" for ::1 at 2020-03-17 12:05:35 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.7ms | Allocations: 374)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 468)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 90.5ms | ActiveRecord: 0.0ms | Allocations: 6491)
+
+
+Started GET "/" for ::1 at 2020-03-17 12:05:37 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 6071)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 55.9ms | ActiveRecord: 0.9ms | Allocations: 13648)
+
+
+Started GET "/posts/14" for ::1 at 2020-03-17 12:08:02 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 576)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 48.0ms | ActiveRecord: 0.2ms | Allocations: 7908)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 12:08:05 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 994)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.2ms | Allocations: 7008)
+
+
+Started DELETE "/posts/14" for ::1 at 2020-03-17 12:08:07 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u3IxzW6NdCjRZrK+y2KZTHOYgYmOk0vFffIZxpWMWOV+RxieYFnKzj/86VP4qprm4sQ1QLtfGoMKeksg72LyAg==", "id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:57:in `destroy'
+[paperclip] deleting C:/Users/Bastien/Desktop/FULL STACK DEVELOPER/6. TRACK YOUR FITNESS HABITS/new_app/traveller/public/system/posts/photos/000/000/014/original/Hydrangeas.jpg
+Redirected to http://localhost:4001/posts
+Completed 302 Found in 20ms (ActiveRecord: 12.1ms | Allocations: 3699)
+
+
+Started GET "/posts" for ::1 at 2020-03-17 12:08:07 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 862)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.2ms | Allocations: 6879)
+
+
