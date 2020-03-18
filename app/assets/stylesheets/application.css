@@ -135,6 +135,11 @@ a.user-name {
     height: 120px;
 }
 
+td.resources {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 footer {
     margin-top: 40px;
 }

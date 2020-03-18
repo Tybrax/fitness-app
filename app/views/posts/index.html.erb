@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Traveling memories</h1>
+<div class="jumbotron mb-5">
+  <h1 class="main-title text-center font-weight-bold">TRAVELER.COM</h1>
+  <h4 class="text-center font-weight-bold">Traveling memories</h4>
+</div>
 
-<table>
+<table class="ml-5">
   <thead>
     <tr>
       <th colspan="3"></th>
@@ -11,7 +14,7 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr class="article-rows container border rounded shadow pl-5 pr-5">
+      <tr class="article-rows container border rounded shadow mb-5 pl-5 pr-5">
         <td class="resources"><%= link_to post.title, post, class: 'article-link' %></td>
         <td>
           <% if post.user == current_user %>
