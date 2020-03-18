@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<% if @user.avatar.present? %>
+  <p><%= image_tag @user.avatar.url, class: 'user-avatar img-fluid border rounded-circle shadow' %></p>
+<% end %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', '/' %>

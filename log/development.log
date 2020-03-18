@@ -10884,3 +10884,1859 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.5ms | Allocations: 8395)
 
 
+Started GET "/" for ::1 at 2020-03-18 11:11:33 +0100
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 1659ms (Views: 1641.2ms | ActiveRecord: 0.7ms | Allocations: 34670)
+
+
+Started GET "/about" for ::1 at 2020-03-18 11:11:45 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.2ms | Allocations: 7821)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 11:12:10 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered posts/index.html.erb within layouts/application (Duration: 49.7ms | Allocations: 17463)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 133ms (Views: 112.8ms | ActiveRecord: 2.2ms | Allocations: 26724)
+
+
+Started GET "/posts/2" for ::1 at 2020-03-18 11:12:14 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:69:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:4
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 55ms (Views: 50.8ms | ActiveRecord: 0.6ms | Allocations: 9266)
+
+
+Started GET "/posts/2/edit" for ::1 at 2020-03-18 11:12:19 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:69:in `set_post'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:78:in `require_author'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Redirected to http://localhost:4001/site/home
+Filter chain halted as :require_author rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 2210)
+
+
+Started GET "/site/home" for ::1 at 2020-03-18 11:12:19 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.2ms | Allocations: 7103)
+
+
+Started GET "/login" for ::1 at 2020-03-18 11:12:23 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 26.1ms | Allocations: 4509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 0.2ms | Allocations: 12151)
+
+
+Started POST "/login" for ::1 at 2020-03-18 11:12:24 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"lu5RxIkQuskIV23O6MOXK+xmyE1tpOYn4H9Id5hCdgGr8f/5u2B9m4aCRtTUmlOPIWlBO3WbIH2+DhDRk/SZBg==", "session"=>{"email"=>"bastien.ratat@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bastien.ratat@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:4001/users/6
+Completed 302 Found in 244ms (ActiveRecord: 0.3ms | Allocations: 1124)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 11:12:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.4ms | Allocations: 8516)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 11:12:27 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2759)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.4ms | Allocations: 9222)
+
+
+Started GET "/posts/2" for ::1 at 2020-03-18 11:12:31 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:69:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:4
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.3ms | Allocations: 8356)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 11:12:43 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2748)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.3ms | Allocations: 9132)
+
+
+Started DELETE "/logout" for ::1 at 2020-03-18 11:12:45 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f38IjNx+m5PpwLEBUCZMwY3KQt1CqGjF+qLnIwaE3LJ+XbroS6UaGYjvujycFlW3CQswXmGoXv58Uz/fkjsYhQ=="}
+Redirected to http://localhost:4001/posts
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 344)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 11:12:45 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 5251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.5ms | Allocations: 12263)
+
+
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentAvatarToUsers (20200318111114)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_file_name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_file_size" bigint[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_updated_at" datetime[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200318111114"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-03-18 12:13:06 +0100
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 178ms (Views: 159.1ms | ActiveRecord: 0.7ms | Allocations: 20104)
+
+
+Started GET "/users/new" for ::1 at 2020-03-18 12:13:09 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 20.3ms | Allocations: 1437)
+  Rendered users/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 1756)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 84ms (Views: 75.4ms | ActiveRecord: 0.7ms | Allocations: 15531)
+
+
+Started POST "/users" for ::1 at 2020-03-18 12:15:12 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Uh4kF+5SfvyosfltzvuNqO9LuvdDy4RccrJKZxSLa36oOzYWBgQ599kYqA/x3WBJbDl30gkAywb01QGy0tBZUg==", "user"=>{"name"=>"Antoine Ratat", "email"=>"antoine.ratat@gmail.com", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x000000000d7d6628 @tempfile=#<Tempfile:C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-14wvmtg.jpg>, @original_filename="mmexport1581692569888.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"mmexport1581692569888.jpg\"\r\nContent-Type: image/jpeg\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-14wvmtg.jpg to C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-opf59g.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-opf59g.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-14wvmtg.jpg to C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-opf59g.jpg
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-opf59g.jpg to C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-cxt02z.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-cxt02z.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-opf59g.jpg to C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-cxt02z.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-cxt02z.jpg"
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:31:in `block in create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antoine.ratat@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `block in create'
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-opf59g.jpg to C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-wkymn9.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-wkymn9.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-opf59g.jpg to C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-wkymn9.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/81d7b3cffee20d6dfe6dcdfa36d3118e20200318-7048-wkymn9.jpg"
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Antoine Ratat"], ["email", "antoine.ratat@gmail.com"], ["created_at", "2020-03-18 11:15:13.011821"], ["updated_at", "2020-03-18 11:15:13.011821"], ["password_digest", "$2a$12$lfUIjCGKdxS7axjqTFnnheS8iX9/3Wzyj5IQ3tjNg/4O9Zm0yvWyK"], ["avatar_file_name", "mmexport1581692569888.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 758941], ["avatar_updated_at", "2020-03-18 11:15:12.604797"]]
+  ↳ app/controllers/users_controller.rb:31:in `block in create'
+  [1m[35m (29.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:31:in `block in create'
+Redirected to http://localhost:4001/users/8
+Completed 302 Found in 503ms (ActiveRecord: 31.1ms | Allocations: 25906)
+
+
+Started GET "/users/8" for ::1 at 2020-03-18 12:15:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2012)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 3924)
+
+
+  
+ActionView::Template::Error (undefined method `photo' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <% if @post.photo.present? %>
+    4:   <p><%= image_tag @post.avatar.url %></p>
+    5: <% end %>
+    6: 
+  
+app/views/users/show.html.erb:3
+Started GET "/users/8" for ::1 at 2020-03-18 12:15:22 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1426)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 3245)
+
+
+  
+ActionView::Template::Error (undefined method `avatar' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <% if @post.avatar.present? %>
+    4:   <p><%= image_tag @post.avatar.url %></p>
+    5: <% end %>
+    6: 
+  
+app/views/users/show.html.erb:3
+Started GET "/users/8" for ::1 at 2020-03-18 12:15:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 414)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 83ms (Views: 76.7ms | ActiveRecord: 0.5ms | Allocations: 9294)
+
+
+Started GET "/users/8" for ::1 at 2020-03-18 12:16:52 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 69ms (Views: 65.6ms | ActiveRecord: 0.4ms | Allocations: 9190)
+
+
+Started GET "/users/8" for ::1 at 2020-03-18 12:18:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 1566ms (Views: 1562.9ms | ActiveRecord: 0.7ms | Allocations: 28861)
+
+
+Started GET "/users/8" for ::1 at 2020-03-18 12:18:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 409)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.4ms | Allocations: 9203)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:19:25 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Redirected to http://localhost:4001/site/home
+Filter chain halted as :authorize_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1519)
+
+
+Started GET "/site/home" for ::1 at 2020-03-18 12:19:25 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.2ms | Allocations: 7802)
+
+
+Started GET "/login" for ::1 at 2020-03-18 12:19:36 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.8ms | Allocations: 4069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.2ms | Allocations: 11717)
+
+
+Started POST "/login" for ::1 at 2020-03-18 12:19:43 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"YNhSt9I1gsXV5jmo2ESWgB834zvwW3qLga7GcPE+igpdx/yK4EVFl1szErLkHVIk0jhqTehkvNHf357W+ohlDQ==", "session"=>{"email"=>"antoine.ratat@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antoine.ratat@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:4001/users/8
+Completed 302 Found in 243ms (ActiveRecord: 0.3ms | Allocations: 1083)
+
+
+Started GET "/users/8" for ::1 at 2020-03-18 12:19:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.4ms | Allocations: 7809)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:19:47 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.2ms | Allocations: 823)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 0.3ms | Allocations: 8792)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:24:28 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 904)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 64.8ms | ActiveRecord: 0.3ms | Allocations: 9520)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:26:29 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 0.4ms | Allocations: 9521)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:27:07 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 882)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms | Allocations: 4435)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Travel The World</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdrOpq_DOZZ5WlHKrQTrJj8Q2TFYN6fsKjrdsh8-rhARQOnFHa">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <a class="navbar-brand" href="/">TRAVELER<span class="navbar-brand-sub">.</span>COM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <%= link_to 'HOME', '/', class: 'li-items' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'ABOUT', about_path, class: 'li-items' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'ARTICLES', posts_path, class: 'li-items' %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <% if current_user %>
+        <%= current_user.name, class:'font-weight-bold' %>
+        <%= link_to 'Log out', logout_path, method: :delete, class: 'logs-link' %>
+      <% else %>
+        <%= link_to 'Log in', login_path, class: 'logs-link' %>
+        <%= link_to 'Sign up', new_user_path, class: 'logs-link' %>
+      <% end %>
+    </header>
+    <%= yield %>
+            <footer class="container-fluid">
+                <div class="row justify-content-center pb-3 pt-3">
+                    <div class="col align-self-center d-flex justify-content-center">
+                      <a href="https://github.com/Tybrax" target="_blank" rel="noopener noreferrer">
+                        <img src="https://i.ibb.co/wBXw152/github.png" width="130" alt="github" />
+                      </a>
+                    </div>
+                    <div class="col align-self-center d-flex justify-content-center">
+                        <a href="https://www.linkedin.com/in/bastien-ratat/" target="_blank" rel="noopener noreferrer">
+                          <img src="https://i.ibb.co/r4Kw1Mv/linkedin.png" width="130" alt="linkedin"  />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Travel The World</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdrOpq_DOZZ5WlHKrQTrJj8Q2TFYN6fsKjrdsh8-rhARQOnFHa">
+8:        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+9:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+10:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:      </head>
+12:    
+13:      <body>
+14:        <header>
+15:          <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+16:            <a class="navbar-brand" href="/">TRAVELER<span class="navbar-brand-sub">.</span>COM</a>
+17:            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+18:              <span class="navbar-toggler-icon"></span>
+19:            </button>
+20:            <div class="collapse navbar-collapse" id="navbarNav">
+21:              <ul class="navbar-nav">
+22:                <li class="nav-item active">
+23:                  <%= link_to 'HOME', '/', class: 'li-items' %>
+24:                </li>
+25:                <li class="nav-item">
+26:                  <%= link_to 'ABOUT', about_path, class: 'li-items' %>
+27:                </li>
+28:                <li class="nav-item">
+29:                  <%= link_to 'ARTICLES', posts_path, class: 'li-items' %>
+30:                </li>
+31:              </ul>
+32:            </div>
+33:          </nav>
+34:          <% if current_user %>
+35:            <%= current_user.name, class:'font-weight-bold' %>
+36:            <%= link_to 'Log out', logout_path, method: :delete, class: 'logs-link' %>
+37:          <% else %>
+38:            <%= link_to 'Log in', login_path, class: 'logs-link' %>
+39:            <%= link_to 'Sign up', new_user_path, class: 'logs-link' %>
+40:          <% end %>
+41:        </header>
+42:        <%= yield %>
+43:                <footer class="container-fluid">
+44:                    <div class="row justify-content-center pb-3 pt-3">
+45:                        <div class="col align-self-center d-flex justify-content-center">
+46:                          <a href="https://github.com/Tybrax" target="_blank" rel="noopener noreferrer">
+47:                            <img src="https://i.ibb.co/wBXw152/github.png" width="130" alt="github" />
+48:                          </a>
+49:                        </div>
+50:                        <div class="col align-self-center d-flex justify-content-center">
+51:                            <a href="https://www.linkedin.com/in/bastien-ratat/" target="_blank" rel="noopener noreferrer">
+52:                              <img src="https://i.ibb.co/r4Kw1Mv/linkedin.png" width="130" alt="linkedin"  />
+53:                            </a>
+54:                        </div>
+55:                    </div>
+56:                </footer>
+57:        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+58:        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+59:        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+60:      </body>
+61:    </html>
+  
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:27:24 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 882)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 4439)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Travel The World</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdrOpq_DOZZ5WlHKrQTrJj8Q2TFYN6fsKjrdsh8-rhARQOnFHa">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <a class="navbar-brand" href="/">TRAVELER<span class="navbar-brand-sub">.</span>COM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <%= link_to 'HOME', '/', class: 'li-items' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'ABOUT', about_path, class: 'li-items' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'ARTICLES', posts_path, class: 'li-items' %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <% if current_user %>
+        <%= current_user.name, class: 'font-weight-bold' %>
+        <%= link_to 'Log out', logout_path, method: :delete, class: 'logs-link' %>
+      <% else %>
+        <%= link_to 'Log in', login_path, class: 'logs-link' %>
+        <%= link_to 'Sign up', new_user_path, class: 'logs-link' %>
+      <% end %>
+    </header>
+    <%= yield %>
+            <footer class="container-fluid">
+                <div class="row justify-content-center pb-3 pt-3">
+                    <div class="col align-self-center d-flex justify-content-center">
+                      <a href="https://github.com/Tybrax" target="_blank" rel="noopener noreferrer">
+                        <img src="https://i.ibb.co/wBXw152/github.png" width="130" alt="github" />
+                      </a>
+                    </div>
+                    <div class="col align-self-center d-flex justify-content-center">
+                        <a href="https://www.linkedin.com/in/bastien-ratat/" target="_blank" rel="noopener noreferrer">
+                          <img src="https://i.ibb.co/r4Kw1Mv/linkedin.png" width="130" alt="linkedin"  />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Travel The World</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdrOpq_DOZZ5WlHKrQTrJj8Q2TFYN6fsKjrdsh8-rhARQOnFHa">
+8:        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+9:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+10:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:      </head>
+12:    
+13:      <body>
+14:        <header>
+15:          <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+16:            <a class="navbar-brand" href="/">TRAVELER<span class="navbar-brand-sub">.</span>COM</a>
+17:            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+18:              <span class="navbar-toggler-icon"></span>
+19:            </button>
+20:            <div class="collapse navbar-collapse" id="navbarNav">
+21:              <ul class="navbar-nav">
+22:                <li class="nav-item active">
+23:                  <%= link_to 'HOME', '/', class: 'li-items' %>
+24:                </li>
+25:                <li class="nav-item">
+26:                  <%= link_to 'ABOUT', about_path, class: 'li-items' %>
+27:                </li>
+28:                <li class="nav-item">
+29:                  <%= link_to 'ARTICLES', posts_path, class: 'li-items' %>
+30:                </li>
+31:              </ul>
+32:            </div>
+33:          </nav>
+34:          <% if current_user %>
+35:            <%= current_user.name, class: 'font-weight-bold' %>
+36:            <%= link_to 'Log out', logout_path, method: :delete, class: 'logs-link' %>
+37:          <% else %>
+38:            <%= link_to 'Log in', login_path, class: 'logs-link' %>
+39:            <%= link_to 'Sign up', new_user_path, class: 'logs-link' %>
+40:          <% end %>
+41:        </header>
+42:        <%= yield %>
+43:                <footer class="container-fluid">
+44:                    <div class="row justify-content-center pb-3 pt-3">
+45:                        <div class="col align-self-center d-flex justify-content-center">
+46:                          <a href="https://github.com/Tybrax" target="_blank" rel="noopener noreferrer">
+47:                            <img src="https://i.ibb.co/wBXw152/github.png" width="130" alt="github" />
+48:                          </a>
+49:                        </div>
+50:                        <div class="col align-self-center d-flex justify-content-center">
+51:                            <a href="https://www.linkedin.com/in/bastien-ratat/" target="_blank" rel="noopener noreferrer">
+52:                              <img src="https://i.ibb.co/r4Kw1Mv/linkedin.png" width="130" alt="linkedin"  />
+53:                            </a>
+54:                        </div>
+55:                    </div>
+56:                </footer>
+57:        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+58:        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+59:        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+60:      </body>
+61:    </html>
+  
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/application.html.erb:35: syntax error, unexpected tLABEL, expecting '='
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:28:06 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 882)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 0.4ms | Allocations: 9519)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:28:31 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 883)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 58.4ms | ActiveRecord: 0.4ms | Allocations: 9505)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:29:27 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 74.7ms | ActiveRecord: 0.4ms | Allocations: 9493)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:29:46 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 71.2ms | ActiveRecord: 1.1ms | Allocations: 9498)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:29:51 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 0.3ms | Allocations: 9508)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:30:34 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 91.3ms | ActiveRecord: 0.7ms | Allocations: 9509)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:30:48 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 76.4ms | ActiveRecord: 0.6ms | Allocations: 9512)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:31:54 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 67.6ms | ActiveRecord: 0.4ms | Allocations: 9496)
+
+
+Started GET "/users/8/edit" for ::1 at 2020-03-18 12:32:15 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 66.7ms | ActiveRecord: 0.4ms | Allocations: 9504)
+
+
+Started PATCH "/users/8" for ::1 at 2020-03-18 12:32:48 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"4OdY0Z/KbSUWG9JHHaaUaOFIvghrUERPwLU0lNDXh/fhxeq1CBHsr3c02XrRlo0eZYnMi0hQcnRGROxoRGhDwA==", "user"=>{"email"=>"antoine.ratat@gmail.com", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x000000000a9c03d8 @tempfile=#<Tempfile:C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-19st8tt.jpg>, @original_filename="IMG_20200206_175949.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"IMG_20200206_175949.jpg\"\r\nContent-Type: image/jpeg\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-19st8tt.jpg to C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-19xwiwj.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-19xwiwj.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-19st8tt.jpg to C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-19xwiwj.jpg
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-19xwiwj.jpg to C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-1rvvnsa.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-1rvvnsa.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-19xwiwj.jpg to C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-1rvvnsa.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-1rvvnsa.jpg"
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:45:in `block in update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "antoine.ratat@gmail.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `block in update'
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-19xwiwj.jpg to C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-11vqmhm.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-11vqmhm.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-19xwiwj.jpg to C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-11vqmhm.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/007fc1c2929fa590a8de98750b6ac93720200318-7048-11vqmhm.jpg"
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "avatar_file_name" = ?, "avatar_file_size" = ?, "avatar_updated_at" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["avatar_file_name", "IMG_20200206_175949.jpg"], ["avatar_file_size", 110053], ["avatar_updated_at", "2020-03-18 11:32:48.775243"], ["password_digest", "$2a$12$0UmITbystSSflefs82b3DeebDYYNE2QttSKyILk9CGTd/.yFXYpme"], ["updated_at", "2020-03-18 11:32:49.094262"], ["id", 8]]
+  ↳ app/controllers/users_controller.rb:45:in `block in update'
+[paperclip] deleting C:/Users/Bastien/Desktop/FULL STACK DEVELOPER/6. TRACK YOUR FITNESS HABITS/new_app/traveller/public/system/users/avatars/000/000/008/original/mmexport1581692569888.jpg
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:45:in `block in update'
+Redirected to http://localhost:4001/users/8
+Completed 302 Found in 356ms (ActiveRecord: 12.2ms | Allocations: 18881)
+
+
+Started GET "/users/8" for ::1 at 2020-03-18 12:32:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 404)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.4ms | Allocations: 8027)
+
+
+Started DELETE "/logout" for ::1 at 2020-03-18 12:32:53 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JRMBLyEVCkyOfw2qTuOt/seHxswnsAVWXz5DZKAms98kMbNLts6Lxu9QBpeC07SIQ0a0TwSwM23Zz5uYNJl36A=="}
+Redirected to http://localhost:4001/posts
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 342)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:32:53 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered posts/index.html.erb within layouts/application (Duration: 40.5ms | Allocations: 13795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 122ms (Views: 96.8ms | ActiveRecord: 1.6ms | Allocations: 23075)
+
+
+Started GET "/login" for ::1 at 2020-03-18 12:32:56 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.2ms | Allocations: 8262)
+
+
+Started POST "/login" for ::1 at 2020-03-18 12:32:58 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3gzaES2B6ecj7oFq09YIF7YB2hnjACQ5UrmCu6t23GzjE3QsH/Euta07qnDvj8yzew5Tb/s/4mMMyNodoMAzaw==", "session"=>{"email"=>"antoine.ratat@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antoine.ratat@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:4001/users/8
+Completed 302 Found in 244ms (ActiveRecord: 0.2ms | Allocations: 947)
+
+
+Started GET "/users/8" for ::1 at 2020-03-18 12:32:58 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.4ms | Allocations: 7685)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:33:59 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.2ms | Allocations: 8197)
+
+
+Started DELETE "/logout" for ::1 at 2020-03-18 12:34:01 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oadr3ayJw5MmLI62U9RQGZwzp5oU7ZtxM7dYTC/XeWyghdm5O1JCGUcDhYuf5ElvGPLVGTftrUq1RoCwu2i9Ww=="}
+Redirected to http://localhost:4001/posts
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 337)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:34:01 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 65ms (Views: 60.9ms | ActiveRecord: 0.5ms | Allocations: 13173)
+
+
+Started GET "/login" for ::1 at 2020-03-18 12:34:03 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 617)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 70ms (Views: 65.6ms | ActiveRecord: 0.2ms | Allocations: 8250)
+
+
+Started POST "/login" for ::1 at 2020-03-18 12:34:05 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"U3aRdE1jjyC1DyzS1oWih/0aieHKUc3T35tCL9yLpv9uaT9JfxNIcjvaB8jq3GYjMBUAl9JuC4mB6hqJ1z1J+A==", "session"=>{"email"=>"bastien.ratat@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bastien.ratat@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:4001/users/6
+Completed 302 Found in 243ms (ActiveRecord: 0.2ms | Allocations: 946)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:34:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.3ms | Allocations: 8318)
+
+
+Started GET "/users/6/edit" for ::1 at 2020-03-18 12:34:16 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 880)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.3ms | Allocations: 8444)
+
+
+Started PATCH "/users/6" for ::1 at 2020-03-18 12:34:34 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"TCQqzVlfXqoH/jQ9Gk6z06F+WnkXm/VIEuTlSb0jfa6vWPS4cD06XAIlMdTxjRPnsRhPz888wvEZ0grXdo1JbQ==", "user"=>{"email"=>"bastien.ratat@gmail.com", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x000000000d9fdaa0 @tempfile=#<Tempfile:C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-1p7eix3.jpg>, @original_filename="IMG_20200209_103547.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"IMG_20200209_103547.jpg\"\r\nContent-Type: image/jpeg\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-1p7eix3.jpg to C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-10fddi9.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-10fddi9.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/RackMultipart20200318-7048-1p7eix3.jpg to C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-10fddi9.jpg
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-10fddi9.jpg to C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-1gugaks.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-1gugaks.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-10fddi9.jpg to C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-1gugaks.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-1gugaks.jpg"
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:45:in `block in update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "bastien.ratat@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `block in update'
+[paperclip] Trying to link C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-10fddi9.jpg to C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-e6rr1t.jpg
+[paperclip] Link failed with File exists @ syserr_fail2_in - C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-e6rr1t.jpg; copying link C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-10fddi9.jpg to C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-e6rr1t.jpg
+Command :: SET PATH=C:\Program Files (x86)\GnuWin32\bin;%PATH% & file -b --mime "C:/Users/Bastien/AppData/Local/Temp/41d67d8ed39322744b849e72cdc9c92620200318-7048-e6rr1t.jpg"
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "avatar_file_name" = ?, "avatar_content_type" = ?, "avatar_file_size" = ?, "avatar_updated_at" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["avatar_file_name", "IMG_20200209_103547.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 2056873], ["avatar_updated_at", "2020-03-18 11:34:34.554489"], ["password_digest", "$2a$12$AKoxOrCVms2EcyNV/a0Y8egfPW9to66un3srkXKuOUm17N7rJf6Ae"], ["updated_at", "2020-03-18 11:34:34.896508"], ["id", 6]]
+  ↳ app/controllers/users_controller.rb:45:in `block in update'
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:45:in `block in update'
+Redirected to http://localhost:4001/users/6
+Completed 302 Found in 383ms (ActiveRecord: 7.4ms | Allocations: 19697)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:34:34 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.4ms | Allocations: 7687)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:34:42 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.2ms | Allocations: 6937)
+
+
+Started GET "/about" for ::1 at 2020-03-18 12:34:44 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 0.2ms | Allocations: 7633)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:34:44 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.3ms | Allocations: 9158)
+
+
+Started GET "/posts/1" for ::1 at 2020-03-18 12:34:54 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:69:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:4
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 0.5ms | Allocations: 8889)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:35:09 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.4ms | Allocations: 7682)
+
+
+Started GET "/users" for ::1 at 2020-03-18 12:35:12 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1273)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.4ms | Allocations: 8328)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:35:33 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms | Allocations: 6939)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:35:37 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.3ms | Allocations: 9153)
+
+
+Started GET "/about" for ::1 at 2020-03-18 12:35:39 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.2ms | Allocations: 6937)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:35:42 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.2ms | Allocations: 6929)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:35:44 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 57.5ms | ActiveRecord: 0.4ms | Allocations: 9123)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:35:48 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.2ms | Allocations: 6923)
+
+
+Started GET "/about" for ::1 at 2020-03-18 12:35:49 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.2ms | Allocations: 6929)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:35:52 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms | Allocations: 6917)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:35:54 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.6ms | Allocations: 9113)
+
+
+Started GET "/posts/1" for ::1 at 2020-03-18 12:35:55 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:69:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:4
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.5ms | Allocations: 8352)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:35:56 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.6ms | Allocations: 7689)
+
+
+Started GET "/users" for ::1 at 2020-03-18 12:35:58 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1002)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.4ms | Allocations: 7926)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:36:19 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 407)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.4ms | Allocations: 9044)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:36:23 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 0.5ms | Allocations: 9044)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:36:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.4ms | Allocations: 9050)
+
+
+Started GET "/users/6/edit" for ::1 at 2020-03-18 12:36:43 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 880)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 0.3ms | Allocations: 8437)
+
+
+Started GET "/users" for ::1 at 2020-03-18 12:36:46 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.4ms | Allocations: 8304)
+
+
+Started GET "/users" for ::1 at 2020-03-18 12:37:27 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 0.6ms | Allocations: 9350)
+
+
+Started GET "/users/6/edit" for ::1 at 2020-03-18 12:37:31 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 872)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 0.3ms | Allocations: 8440)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:37:33 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.2ms | Allocations: 7607)
+
+
+Started GET "/users/6/edit" for ::1 at 2020-03-18 12:37:50 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 878)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 76.6ms | ActiveRecord: 0.4ms | Allocations: 9508)
+
+
+Started GET "/users/6/edit" for ::1 at 2020-03-18 12:38:04 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 873)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 62.3ms | ActiveRecord: 1.4ms | Allocations: 9488)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:38:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.4ms | Allocations: 8010)
+
+
+Started GET "/users" for ::1 at 2020-03-18 12:38:14 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.5ms | Allocations: 8318)
+
+
+Started GET "/users" for ::1 at 2020-03-18 12:38:26 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 74ms (Views: 70.5ms | ActiveRecord: 0.4ms | Allocations: 9356)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:38:28 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.3ms | Allocations: 7991)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:38:30 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.2ms | Allocations: 7601)
+
+
+Started GET "/users/" for ::1 at 2020-03-18 12:38:36 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1011)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.4ms | Allocations: 7944)
+
+
+Started GET "/users/" for ::1 at 2020-03-18 12:39:16 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1221)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1903)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: 
+    5: <table cellspacing="20">
+    6:   <tbody>
+    7:     <% @users.each do |user| %>
+    8:       <tr>
+    9:         <td><p class="ml-5"><%= link_to user.name, user %></p></td>
+   10:         <td><p class="ml-5"><%= user.email %></p></td>
+  
+app/views/users/index.html.erb:7
+Started GET "/users/1" for ::1 at 2020-03-18 12:39:20 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+Completed 404 Not Found in 12ms (ActiveRecord: 1.4ms | Allocations: 4025)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:62:in `set_user'
+Started GET "/" for ::1 at 2020-03-18 12:39:26 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.2ms | Allocations: 12701)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:39:29 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 8848)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 66.6ms | ActiveRecord: 1.4ms | Allocations: 16885)
+
+
+Started GET "/posts/1" for ::1 at 2020-03-18 12:39:33 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:69:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:4
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 0.5ms | Allocations: 8921)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:39:34 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.3ms | Allocations: 7699)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:39:36 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.3ms | Allocations: 6933)
+
+
+Started GET "/about" for ::1 at 2020-03-18 12:39:38 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.4ms | Allocations: 7632)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:39:39 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.5ms | Allocations: 9146)
+
+
+Started GET "/posts/2" for ::1 at 2020-03-18 12:39:41 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:69:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:4
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.4ms | Allocations: 8355)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:39:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.4ms | Allocations: 7684)
+
+
+Started GET "/users/6/edit" for ::1 at 2020-03-18 12:39:44 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 881)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 47.5ms | ActiveRecord: 0.3ms | Allocations: 8455)
+
+
+Started GET "/users/6" for ::1 at 2020-03-18 12:39:47 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.3ms | Allocations: 7666)
+
+
+Started GET "/users/6/edit" for ::1 at 2020-03-18 12:39:48 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.6ms | Allocations: 7884)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:39:50 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.2ms | Allocations: 6943)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:39:52 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.3ms | Allocations: 6917)
+
+
+Started GET "/about" for ::1 at 2020-03-18 12:39:53 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.2ms | Allocations: 6925)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:39:53 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.3ms | Allocations: 9152)
+
+
+Started GET "/users" for ::1 at 2020-03-18 12:40:03 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1242)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1695)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: 
+    5: <table cellspacing="20">
+    6:   <tbody>
+    7:     <% @users.each do |user| %>
+    8:       <tr>
+    9:         <td><p class="ml-5"><%= link_to user.name, user %></p></td>
+   10:         <td><p class="ml-5"><%= user.email %></p></td>
+  
+app/views/users/index.html.erb:7
+Started GET "/users/1" for ::1 at 2020-03-18 12:40:05 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1092)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:62:in `set_user'
+Started GET "/users/4" for ::1 at 2020-03-18 12:40:08 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1092)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+  
+app/controllers/users_controller.rb:62:in `set_user'
+Started GET "/users/6" for ::1 at 2020-03-18 12:40:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.7ms | Allocations: 7661)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:40:15 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.2ms | Allocations: 6919)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:40:17 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.4ms | Allocations: 9131)
+
+
+Started GET "/about" for ::1 at 2020-03-18 12:40:18 +0100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.2ms | Allocations: 6919)
+
+
+Started GET "/" for ::1 at 2020-03-18 12:40:18 +0100
+Processing by SiteController#home as HTML
+  Rendering site/home.html.erb within layouts/application
+  Rendered site/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.2ms | Allocations: 6925)
+
+
+Started GET "/posts" for ::1 at 2020-03-18 12:40:19 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.4ms | Allocations: 9128)
+
+
