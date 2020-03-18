@@ -32,7 +32,10 @@
         </div>
       </nav>
       <% if current_user %>
-        <%= current_user.name %>
+        <span class="font-weight-bold text-uppercase">
+          <%= current_user.name %>
+        </span>
+        <%= link_to 'Profile', current_user, class: 'logs-link' %>
         <%= link_to 'Log out', logout_path, method: :delete, class: 'logs-link' %>
       <% else %>
         <%= link_to 'Log in', login_path, class: 'logs-link' %>
