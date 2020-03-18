@@ -107,15 +107,15 @@ a.article-editers:hover {
     color: #f76a8c;
 }
 
-a.add-article {
+a.controls {
     text-decoration: none;
 }
 
-a.add-article:hover {
+a.controls:hover {
     color: #1b262c;
 }
 
-.add-article {
+.controls {
     text-transform: uppercase;
     color: #f76a8c;
 }
@@ -131,8 +131,8 @@ a.user-name {
 }
 
 .user-avatar {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 
 footer {
